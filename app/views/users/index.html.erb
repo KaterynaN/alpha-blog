@@ -1,0 +1,16 @@
+<h1 align="center">All Alpha Bloggers</h1>
+<div class="row flex-column align-items-center">
+  <% @users.each do |user| %>
+    <ul class="listing">
+      <div class="row justify-content-center">
+        <div class="well w-50 d-flex flex-column align-items-center">
+          <li><%= link_to gravatar_for(user), user_path(user) %></li>
+          <li class="article-title">
+            <%= link_to user.username, user_path(user) %>
+          </li>
+          <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+        </div>
+      </div>
+    </ul>
+  <% end %>
+</div>
