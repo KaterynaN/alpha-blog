@@ -113,3 +113,14 @@ small{
     justify-content: center;
   }
 }
+
+.badge{
+  background-color: pink;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
