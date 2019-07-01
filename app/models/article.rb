@@ -5,4 +5,6 @@ class Article < ApplicationRecord
                           length: {minimum: 10, maximum: 300}
 
   belongs_to :user
+  has_many :article_categories
+  has_many :categories, through: :article_categories
 end
